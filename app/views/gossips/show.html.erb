@@ -1,0 +1,15 @@
+<center>
+<div class="card card-gossip" style="width: 70%">
+  <div class="card-header">
+    <h2><%= @gossip.title %></h2>
+  </div>
+  <div class="card-body">
+  
+      <p><%= ((@gossip.content)+" ")*50 %></p>
+      <footer class="blockquote-footer">Cet article a été écrit par <b><%= @gossip.user.first_name %> : <%= link_to "plus d'infos sur l'auteur", user_path(:user => @gossip.user.id) %></b></footer>
+
+  </div>
+</div>
+<br><br><br>
+ <a class="btn btn-primary" style="margin: 20px"href = '/'>Retour à l'acceuil</a> 
+</center>
